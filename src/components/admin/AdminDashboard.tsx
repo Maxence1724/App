@@ -10,8 +10,12 @@
    const fetchStats = async () => {
      setLoading(true);
      try {
+     }
+   }
 -      // Fetch real data from Supabase
 +      // Fetch real data from SQLite
        const [postsResult, projectsResult, messagesResult, unreadResult] = await Promise.all([
          blogService.getAllPosts(),
          projectService.getAllProjects(),
+       ]
+       )

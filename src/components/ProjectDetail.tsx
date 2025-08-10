@@ -8,12 +8,16 @@
 
 -// Convert Supabase project to display format
 -const convertSupabaseProject = (project: SupabaseProject) => ({
+}
+)
 +// Convert SQLite project to display format
 +const convertSQLiteProject = (project: SQLiteProject) => ({
    id: project.id,
    title: project.title,
    description: project.description,
    longDescription: project.long_description,
+}
+)
 -  technologies: project.technologies,
 +  technologies: Array.isArray(project.technologies) ? project.technologies : [],
    category: project.category,
@@ -29,6 +33,7 @@
    liveUrl: project.live_url,
 @@ .. @@
  const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onBack, onNavigateHome, onNavigateToBlog }) => {
+ }
 -  // Fetch project from Supabase
 -  const { project: supabaseProject, loading, error } = useProject(projectId);
 +  // Fetch project from SQLite

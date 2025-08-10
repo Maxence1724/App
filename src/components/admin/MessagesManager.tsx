@@ -4,3 +4,5 @@
 -import { contactService, ContactMessage } from '../../lib/supabase';
 +import { contactService } from '../../lib/sqlite';
 +import { ContactMessage } from '../../lib/database';
+
+export default React
