@@ -42,7 +42,8 @@
 +    console.log('BlogPage - SQLite available:', isSQLiteAvailable());
 +    console.log('BlogPage - Total posts from SQLite:', sqlitePosts.length);
 +    if (sqlitePosts.length > 0) {
-+      console.log('BlogPage - First few posts:', sqlitePosts.slice(0, 3).map(p => ({
++      console.log('BlogPage - First few posts:'
+}, sqlitePosts.slice(0, 3).map(p => ({
          title: p.title,
          slug: p.slug,
          featured: p.featured
